@@ -18,26 +18,37 @@ eraser.onclick = function() {
     pen.classList.remove('active')
 }
 
+black.onclick = function() {
+  context.fillStyle = 'black'
+  context.strokeStyle = 'black'
+  black.classList.add('active')
+  red.classList.remove('active')
+  green.classList.remove('active')
+  blue.classList.remove('active')
+}
 red.onclick = function() {
     context.fillStyle = 'red'
     context.strokeStyle = 'red'
     red.classList.add('active')
     green.classList.remove('active')
     blue.classList.remove('active')
+    black.classList.remove('active')
 }
 green.onclick = function() {
   context.fillStyle = 'green'
   context.strokeStyle = 'green'
-  red.classList.remove('active')
   green.classList.add('active')
+  red.classList.remove('active')
   blue.classList.remove('active')
+  black.classList.remove('active')
 }
 blue.onclick = function() {
   context.fillStyle = 'blue'
   context.strokeStyle = 'blue'
+  blue.classList.add('active')
   red.classList.remove('active')
   green.classList.remove('active')
-  blue.classList.add('active')
+  black.classList.remove('active')
 }
 /***设置画布大小*****/
 function autoSetCanvasSize(canvas) {
